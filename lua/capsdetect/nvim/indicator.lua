@@ -1,4 +1,4 @@
-local config = require("capsdetect.nvim.config")
+local config = require("capsdetect.nvim.config").options
 
 local win = nil
 local buf = nil
@@ -23,7 +23,7 @@ local function close_window()
 end
 
 local function get_highlight()
-	local highlight = config.options.indicator.highlight
+	local highlight = config.indicator.highlight
 
 	if type(highlight) == "string" then
 		return highlight
