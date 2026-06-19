@@ -18,7 +18,7 @@ return {
           -- those are the defaults
 	      schedule = {
 		      no_schedule = false, -- turns of the scheduler / updater
-		      refresh_ms = 200, -- rate at which the update happens
+		      refresh_ms = 100, -- rate at which the update happens
             -- user provided call back with signature:
             -- act_on(state) where state is a bool
             -- which is setting the variable / updating the window

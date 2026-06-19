@@ -1,7 +1,7 @@
 local defaults = {
 	schedule = {
 		dont_schedule = false,
-		refresh_ms = 200,
+		refresh_ms = 100,
 		callback = nil,
 		use_indicator = true,
 		update_global = true,
