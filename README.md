@@ -27,7 +27,7 @@ return {
             -- vim.g.caps_state gets updated on schedule or not set at all
 		      update_global = true, 
 	      },
-			inddicator = {
+			indicator = {
 				use_indicator = true, -- use the builtin indicator
 				highligh = "ErrorMsg", -- color of the "CAPS" text
 				-- alternative:
