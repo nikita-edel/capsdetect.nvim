@@ -31,10 +31,9 @@ return {
 				use_indicator = true, -- use the builtin indicator
 				highligh = "ErrorMsg", -- color of the "CAPS" text
 				-- alternative:
-				-- [[
-				highlight = {
-					fg = "#ff0000",
-				}, ]]
+				--highlight = {
+					--fg = "#ff0000",
+				--},
 		})
 	end,
 }
