@@ -3,8 +3,15 @@ local defaults = {
 		dont_schedule = false,
 		refresh_ms = 100,
 		callback = nil,
-		use_indicator = true,
 		update_global = true,
+	},
+	indicator = {
+		use_indicator = true,
+		highlight = "ErrorMsg",
+		-- alternative:
+		-- highlight = {
+		-- fg = "#ff0000",
+		-- },
 	},
 }
 

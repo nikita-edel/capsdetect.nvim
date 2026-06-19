@@ -1,4 +1,4 @@
-local config = require("capsdetect.nvim.config")
+local config = require("capsdetect.nvim.config").options
 local get_caps_state = require("capsdetect.nvim.caps_fn")
 
 local M = {
@@ -9,13 +9,13 @@ local timer = nil
 local update_indicator = nil
 
 local function set_caps(state)
-	local schedule = config.options.schedule
+	local schedule = config.schedule
 
 	if schedule.update_global then
 		vim.g.caps_state = state
 	end
 
-	if schedule.use_indicator then
+	if config.indicator.use_indicator then
 		if update_indicator == nil then
 			update_indicator = require("capsdetect.nvim.indicator")
 		end
@@ -48,7 +48,7 @@ local function update_capslock()
 end
 
 function M.start()
-	local schedule = config.options.schedule
+	local schedule = config.schedule
 
 	if schedule.dont_schedule then
 		M.stop()

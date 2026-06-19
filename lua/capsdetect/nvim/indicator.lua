@@ -1,5 +1,8 @@
+local config = require("capsdetect.nvim.config")
+
 local win = nil
 local buf = nil
+local ns = vim.api.nvim_create_namespace("capsdetect_indicator")
 
 local window_config = {
 	relative = "cursor",
@@ -19,6 +22,21 @@ local function close_window()
 	win = nil
 end
 
+local function get_highlight()
+	local highlight = config.options.indicator.highlight
+
+	if type(highlight) == "string" then
+		return highlight
+	end
+
+	if type(highlight) == "table" then
+		vim.api.nvim_set_hl(0, "CapsDetectIndicator", highlight)
+		return "CapsDetectIndicator"
+	end
+
+	return "ErrorMsg"
+end
+
 local function get_buffer()
 	if buf ~= nil and vim.api.nvim_buf_is_valid(buf) then
 		return buf
@@ -26,7 +44,7 @@ local function get_buffer()
 
 	buf = vim.api.nvim_create_buf(false, true)
 	vim.api.nvim_buf_set_lines(buf, 0, -1, false, { "CAPS" })
-	vim.api.nvim_buf_add_highlight(buf, -1, "ErrorMsg", 0, 0, -1)
+	vim.api.nvim_buf_add_highlight(buf, ns, get_highlight(), 0, 0, -1)
 
 	return buf
 end
