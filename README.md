@@ -33,7 +33,7 @@ return {
 }
 ```
 
-## functions
+## Functions
 this plugin exposes:
 - `get_caps_state()` which is the platforms specific function that returns a bool
 - `start()` and `stop()`
