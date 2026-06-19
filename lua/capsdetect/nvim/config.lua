@@ -1,25 +1,21 @@
-local M = {}
 local defaults = {
 	schedule = {
-		update_global = true,
-		use_indicator = true,
+		dont_schedule = false,
 		refresh_ms = 200,
 		callback = nil,
+		use_indicator = true,
+		update_global = true,
 	},
 }
 
-M = vim.deepcopy(defaults)
+local M = {}
+M.options = vim.deepcopy(defaults)
 
 function M.setup(opts)
-	local merged = vim.tbl_deep_extend("force", defaults, opts or {})
+	M.options =
+		vim.tbl_deep_extend("force", vim.deepcopy(defaults), opts or {})
 
-	for key in pairs(M) do
-		M[key] = nil
-	end
-
-	for key, value in pairs(merged) do
-		M[key] = value
-	end
+	return M
 end
 
 return M
