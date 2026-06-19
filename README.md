@@ -23,11 +23,18 @@ return {
             -- act_on(state) where state is a bool
             -- which is setting the variable / updating the window
 		      callback = nil,
-		      use_indicator = true, -- use the builtin indicator
             -- decides if the global vim variable:
             -- vim.g.caps_state gets updated on schedule or not set at all
 		      update_global = true, 
 	      },
+			inddicator = {
+				use_indicator = true, -- use the builtin indicator
+				highligh = "ErrorMsg", -- color of the "CAPS" text
+				-- alternative:
+				-- [[
+				highlight = {
+					fg = "#ff0000",
+				}, ]]
 		})
 	end,
 }
