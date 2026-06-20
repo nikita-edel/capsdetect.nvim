@@ -1,5 +1,5 @@
-local config = require("capsdetect.nvim.config")
-local scheduler = require("capsdetect.nvim.capsdetect")
+local config = require("capsdetect.config")
+local scheduler = require("capsdetect.capsdetect")
 
 local M = {}
 

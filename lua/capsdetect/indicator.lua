@@ -1,4 +1,4 @@
-local config = require("capsdetect.nvim.config").options
+local config = require("capsdetect.config").options
 
 local win = nil
 local buf = nil

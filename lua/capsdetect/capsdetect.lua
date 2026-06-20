@@ -1,5 +1,5 @@
-local config = require("capsdetect.nvim.config").options
-local get_caps_state = require("capsdetect.nvim.caps_fn")
+local config = require("capsdetect.config").options
+local get_caps_state = require("capsdetect.caps_fn")
 
 local M = {
 	get_caps_state = get_caps_state,
@@ -17,7 +17,7 @@ local function set_caps(state)
 
 	if config.indicator.use_indicator then
 		if update_indicator == nil then
-			update_indicator = require("capsdetect.nvim.indicator")
+			update_indicator = require("capsdetect.indicator")
 		end
 
 		update_indicator(state)

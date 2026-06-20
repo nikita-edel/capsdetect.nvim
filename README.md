@@ -12,9 +12,9 @@ return {
 
 ```lua
 return {
-	dir = "~/dev/capsdetect.nvim",
+    "nikita-edel/capsdetect.nvim",
 	config = function()
-		require("capsdetect.nvim").setup({
+		require("capsdetect").setup({
           -- those are the defaults
 	      schedule = {
 		      no_schedule = false, -- turns of the scheduler / updater

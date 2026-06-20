@@ -1,1 +1,1 @@
-require("capsdetect.nvim")
+require("capsdetect")
