@@ -34,6 +34,7 @@ return {
 				--highlight = {
 					--fg = "#ff0000",
 				--},
+            },
 		})
 	end,
 }
