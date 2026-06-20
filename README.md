@@ -29,7 +29,7 @@ return {
 			},
 			indicator = {
 				use_indicator = true, -- use the builtin indicator
-				highligh = "ErrorMsg", -- color of the "CAPS" text
+				highlight = "ErrorMsg", -- color of the "CAPS" text
 				-- alternative:
 				--highlight = {
 				--fg = "#ff0000",
