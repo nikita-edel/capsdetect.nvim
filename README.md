@@ -52,5 +52,4 @@ The builtin indiciator is a small window that follows above the cursor:
 ![demo](assets/capsdetect.gif)
 
 # Contribution
-I did not test for MacOS scince i dont have it installed nor an Apple device, feed back would be nice.  
 feel free to submit a pr for more supported platforms
